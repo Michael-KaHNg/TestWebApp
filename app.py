@@ -28,5 +28,5 @@ def bmi():
 
 if __name__ == '__main__':
     #bmi()   #  run in spyder IDE
-    #start_server(bmi(), port = 80)  #  run on local computer through terminal
-    start_server(bmi(), port=8080)  #  run on cloud
+    start_server(bmi(), port = 80)  #  run on local computer through terminal
+    #start_server(bmi(), port=8080)  #  run on cloud
