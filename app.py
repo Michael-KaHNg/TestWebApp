@@ -21,5 +21,5 @@ def bmi():
 if __name__ == '__main__':
     #bmi()   #  run in spyder IDE
     #pywebio.start_server(bmi, port = 80)  #  run on local computer through terminal
-    start_server(bmi, debug=True, port=8080, cdn=False)  #  run on cloud
+    pywebio.start_server(bmi, debug=True, port=8080, cdn=False)  #  run on cloud
     
