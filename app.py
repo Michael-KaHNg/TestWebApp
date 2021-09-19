@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 19 19:34:57 2021
+
+@author: kang
+"""
+
 # A simple script to calculate BMI
 from pywebio.input import input, FLOAT
 from pywebio.output import put_text
@@ -20,6 +28,5 @@ def bmi():
 
 if __name__ == '__main__':
     #bmi()   #  run in spyder IDE
-    #pywebio.start_server(bmi, port = 80)  #  run on local computer through terminal
-    pywebio.start_server(bmi, debug=True, port=8080, cdn=False)  #  run on cloud
-    
+    #start_server(bmi(), port = 80)  #  run on local computer through terminal
+    start_server(bmi(), debug=True, port=8080, cdn=False)  #  run on cloud
