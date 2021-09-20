@@ -7,6 +7,10 @@ Created on Sun Sep 19 19:34:57 2021
 """
 
 # A simple script to calculate BMI
+
+from pywebio.platform.flask import webio_view
+from pywebio import STATIC_PATH
+
 from pywebio.input import input, FLOAT
 from pywebio.output import put_text
 from pywebio import start_server
@@ -37,4 +41,6 @@ if __name__ == '__main__':                  #  run on cloud
     parser.add_argument("-p", "--port", type=int, default=8080)
     args = parser.parse_args()
 
-    start_server(bmi(), port=args.port)
+    start_server(bmi, port=args.port)
+    
+
