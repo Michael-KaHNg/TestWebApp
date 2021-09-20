@@ -37,4 +37,4 @@ if __name__ == '__main__':                  #  run on cloud
     parser.add_argument("-p", "--port", type=int, default=8080)
     args = parser.parse_args()
 
-    start_server(bmi, port=args.port)
+    start_server(bmi(), port=args.port)
