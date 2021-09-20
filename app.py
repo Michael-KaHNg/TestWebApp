@@ -8,7 +8,6 @@ Created on Sun Sep 19 19:34:57 2021
 
 # A simple script to calculate BMI
 
-from pywebio.platform.flask import webio_view
 from pywebio import STATIC_PATH
 
 from pywebio.input import input, FLOAT
@@ -31,16 +30,16 @@ def bmi():
             put_text('Your BMI: %.1f. Category: %s' % (BMI, status))
             break
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
     #bmi()   #  run in spyder IDE
-    #start_server(bmi(), port = 80)  #  run on local computer through terminal
+    start_server(bmi(), port = 8080)  #  run on local computer through terminal
 
     
-if __name__ == '__main__':                  #  run on cloud
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--port", type=int, default=8080)
-    args = parser.parse_args()
+# if __name__ == '__main__':                  #  run on cloud
+#     parser = argparse.ArgumentParser()
+#     parser.add_argument("-p", "--port", type=int, default=8080)
+#     args = parser.parse_args()
 
-    start_server(bmi, port=args.port)
+#     start_server(bmi(), port=args.port)
     
 
