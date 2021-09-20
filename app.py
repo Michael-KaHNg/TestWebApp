@@ -30,16 +30,16 @@ def bmi():
             put_text('Your BMI: %.1f. Category: %s' % (BMI, status))
             break
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #bmi()   #  run in spyder IDE
-    start_server(bmi(), port = $PORT)  #  run on local computer through terminal
+    #start_server(bmi(), port = 80  #  run on local computer through terminal
 
     
-# if __name__ == '__main__':                  #  run on cloud
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("-p", "--port", type=int, default=8080)
-#     args = parser.parse_args()
+if __name__ == '__main__':                  #  run on cloud
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--port", type=int, default=8080)
+    args = parser.parse_args()
 
-#     start_server(bmi(), port=args.port)
+    start_server(bmi(), port=args.port)
     
 
